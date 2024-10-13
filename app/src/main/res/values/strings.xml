@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">MIPT_3_praktinis</string>
+    <string name="MC_button_text">MC</string>"
+    <string name="MR_button_text">MR</string>
+    <string name="MS_button_text">MS</string>
+    <string name="M_plus_button_text">M+</string>
+    <string name="M_minus_button_text">M-</string>
+
+    <string name="back_button_text">←</string>
+    <string name="CE_button_text">CE</string>
+    <string name="C_button_text">C</string>
+    <string name="plus_minus_button_text">±"</string>
+    <string name="square_root_button_text">√"</string>
+
+    <string name="seven_button_text">7</string>
+    <string name="eight_button_text">8</string>
+    <string name="nine_button_text">9</string>
+    <string name="divide_button_text">/</string>
+    <string name="percentage_button_text">%</string>
+
+    <string name="four_button_text">4</string>"
+    <string name="five_button_text">5</string>
+    <string name="six_button_text">6</string>
+    <string name="multiply_button_text">*</string>
+    <string name="divideonebyx_button_text">1/x</string>
+
+    <string name="one_button_text">1</string>
+    <string name="two_button_text">2</string>
+    <string name="three_button_text">3</string>
+    <string name="minus_button_text">-</string>
+    <string name="equals_button_text">=</string>
+
+    <string name="zero_button_text">0</string>
+    <string name="dot_button_text">.</string>
+    <string name="plus_button_text">+</string>
+
 </resources>
