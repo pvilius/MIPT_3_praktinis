@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTintMode="add"
+    android:background="#c2cfde"
     android:orientation="vertical">
+
 
     <TextView
         android:id="@+id/tvSolution"
@@ -16,6 +18,7 @@
         android:ems="10"
         android:gravity="center|right"
         android:text="@string/zero_button_text"
+        android:background="@drawable/borders"
         android:textSize="48sp" />
 
     <LinearLayout
@@ -24,6 +27,7 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         android:weightSum="5">
+
 
         <Button
             android:id="@+id/btnMC"
@@ -36,10 +40,14 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/MC_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp"
+            />
+
 
         <Button
             android:id="@+id/btnMR"
@@ -52,10 +60,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/MR_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnMS"
@@ -68,10 +78,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/MS_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnMPlus"
@@ -84,10 +96,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/M_plus_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnMMinus"
@@ -100,10 +114,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/M_minus_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
     </LinearLayout>
 
@@ -125,10 +141,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/back_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnCE"
@@ -141,10 +159,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/CE_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnC"
@@ -157,10 +177,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/C_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnPlusMinus"
@@ -173,10 +195,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/plus_minus_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnSquareRoot"
@@ -189,10 +213,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/square_root_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
 
     </LinearLayout>
@@ -215,10 +241,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/seven_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnEight"
@@ -231,10 +259,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/eight_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnNine"
@@ -247,10 +277,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/nine_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnDivide"
@@ -263,10 +295,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/divide_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnPercentage"
@@ -279,10 +313,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/percentage_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -303,10 +339,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/four_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnFive"
@@ -319,10 +357,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/five_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnSix"
@@ -335,10 +375,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/six_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnMultiply"
@@ -351,10 +393,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/multiply_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
 
         <Button
             android:id="@+id/btnDivideOneByX"
@@ -367,10 +411,12 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
             android:layout_weight="1"
+            android:backgroundTint="#e3ebf4"
             android:padding="0dp"
             android:text="@string/divideonebyx_button_text"
+            android:textColor="#193658"
             android:textSize="26sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="4dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -408,10 +454,12 @@
                         android:layout_marginRight="4dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#e3ebf4"
                         android:padding="0dp"
                         android:text="@string/one_button_text"
+                        android:textColor="#193658"
                         android:textSize="26sp"
-                        app:cornerRadius="0dp" />
+                        app:cornerRadius="4dp" />
 
                     <Button
                         android:id="@+id/btnTwo"
@@ -424,10 +472,12 @@
                         android:layout_marginRight="4dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#e3ebf4"
                         android:padding="0dp"
                         android:text="@string/two_button_text"
+                        android:textColor="#193658"
                         android:textSize="26sp"
-                        app:cornerRadius="0dp" />
+                        app:cornerRadius="4dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -448,10 +498,12 @@
                         android:layout_marginRight="4dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#e3ebf4"
                         android:padding="0dp"
                         android:text="@string/zero_button_text"
+                        android:textColor="#193658"
                         android:textSize="26sp"
-                        app:cornerRadius="0dp" />
+                        app:cornerRadius="4dp" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -486,10 +538,12 @@
                         android:layout_marginRight="4dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#e3ebf4"
                         android:padding="0dp"
                         android:text="@string/three_button_text"
+                        android:textColor="#193658"
                         android:textSize="26sp"
-                        app:cornerRadius="0dp" />
+                        app:cornerRadius="4dp" />
 
                     <Button
                         android:id="@+id/btnDot"
@@ -502,10 +556,12 @@
                         android:layout_marginRight="4dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#e3ebf4"
                         android:padding="0dp"
                         android:text="@string/dot_button_text"
+                        android:textColor="#193658"
                         android:textSize="26sp"
-                        app:cornerRadius="0dp" />
+                        app:cornerRadius="4dp" />
 
                 </LinearLayout>
 
@@ -526,10 +582,12 @@
                         android:layout_marginRight="4dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#e3ebf4"
                         android:padding="0dp"
                         android:text="@string/plus_button_text"
+                        android:textColor="#193658"
                         android:textSize="26sp"
-                        app:cornerRadius="0dp" />
+                        app:cornerRadius="4dp" />
 
                     <Button
                         android:id="@+id/btnMinus"
@@ -542,9 +600,12 @@
                         android:layout_marginRight="4dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#e3ebf4"
                         android:text="@string/minus_button_text"
+                        android:textColor="#193658"
                         android:textSize="18sp"
-                        app:cornerRadius="0dp" />
+                        app:cornerRadius="4dp" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -565,12 +626,24 @@
                         android:layout_marginRight="4dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
+                        android:backgroundTint="#e3ebf4"
                         android:padding="0dp"
                         android:text="@string/equals_button_text"
+                        android:textColor="#193658"
                         android:textSize="26sp"
-                        app:cornerRadius="0dp" />
+                        app:cornerRadius="4dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:orientation="horizontal">
+    </LinearLayout>
+
 </LinearLayout>
+
+
