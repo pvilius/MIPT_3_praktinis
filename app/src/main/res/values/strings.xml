@@ -9,8 +9,8 @@
     <string name="back_button_text">←</string>
     <string name="CE_button_text">CE</string>
     <string name="C_button_text">C</string>
-    <string name="plus_minus_button_text">±"</string>
-    <string name="square_root_button_text">√"</string>
+    <string name="plus_minus_button_text">±</string>
+    <string name="square_root_button_text">√</string>
 
     <string name="seven_button_text">7</string>
     <string name="eight_button_text">8</string>
@@ -18,7 +18,7 @@
     <string name="divide_button_text">/</string>
     <string name="percentage_button_text">%</string>
 
-    <string name="four_button_text">4</string>"
+    <string name="four_button_text">4</string>
     <string name="five_button_text">5</string>
     <string name="six_button_text">6</string>
     <string name="multiply_button_text">*</string>
