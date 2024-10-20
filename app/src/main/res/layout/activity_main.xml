@@ -12,13 +12,18 @@
         android:id="@+id/tvSolution"
         android:layout_width="match_parent"
         android:layout_height="6dp"
-        android:layout_margin="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_weight="2"
-        android:maxLines = "1"
+        android:background="@drawable/borders"
         android:ems="10"
         android:gravity="center|right"
+        android:maxLines="1"
         android:text="@string/zero_button_text"
-        android:background="@drawable/borders"
         android:textSize="48sp" />
 
     <LinearLayout

@@ -64,17 +64,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String buttonText = button.getText().toString();
         String dataToCalculate = tvSolution.getText().toString();
 
-
+        // Equals button logic (calculates result)
         if (button.getId() == R.id.btnEquals) {
             calculateResult(dataToCalculate);
             return;
         }
 
+        // Clear button logic
         if (button.getId() == R.id.btnC) {
             tvSolution.setText("0");
             return;
         }
 
+        //Back button logic (deletes last character)
         if (button.getId() == R.id.btnBack){
             if (dataToCalculate.length() > 0) {
                 dataToCalculate = dataToCalculate.substring(0, dataToCalculate.length() - 1);
@@ -88,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             dataToCalculate = "";
         }
 
+        // PlusMinus button logic (changes sign of the number)
         if (button.getId() == R.id.btnPlusMinus) {
             if (!dataToCalculate.equals("0") && !dataToCalculate.equals("Error")) {
                 int lastOperatorIndex = Math.max(
@@ -134,12 +137,66 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
+        // Dot button logic (adds dot to the number)
+        if (button.getId() == R.id.btnDot) {
+            int lastOperatorIndex = Math.max(
+                    dataToCalculate.lastIndexOf('+'),
+                    Math.max(
+                            dataToCalculate.lastIndexOf('-'),
+                            Math.max(
+                                    dataToCalculate.lastIndexOf('*'),
+                                    dataToCalculate.lastIndexOf('/')
+                            )
+                    )
+            );
 
+            String lastNumber = lastOperatorIndex == -1 ? dataToCalculate : dataToCalculate.substring(lastOperatorIndex + 1);
+
+            if (!lastNumber.contains(".")) {
+                if (lastNumber.isEmpty()) {
+                    dataToCalculate += "0.";
+                } else {
+                    dataToCalculate += ".";
+                }
+            }
+            tvSolution.setText(dataToCalculate);
+            return;
+        }
+
+        if (button.getId() == R.id.btnZero || button.getId() == R.id.btnOne || button.getId() == R.id.btnTwo ||
+                button.getId() == R.id.btnThree || button.getId() == R.id.btnFour || button.getId() == R.id.btnFive ||
+                button.getId() == R.id.btnSix || button.getId() == R.id.btnSeven || button.getId() == R.id.btnEight ||
+                button.getId() == R.id.btnNine) {
+
+            if (dataToCalculate.equals("0")) {
+                dataToCalculate = buttonText;
+            } else {
+                dataToCalculate += buttonText;
+            }
+            tvSolution.setText(dataToCalculate);
+            return;
+        }
+
+        // Only one operator can be used in a row (division, multiplication, subtraction, addition)
+        if (button.getId() == R.id.btnPlus || button.getId() == R.id.btnMinus ||
+                button.getId() == R.id.btnMultiply || button.getId() == R.id.btnDivide) {
+
+            if (dataToCalculate.endsWith("+") || dataToCalculate.endsWith("-") ||
+                    dataToCalculate.endsWith("*") || dataToCalculate.endsWith("/")) {
+                dataToCalculate = dataToCalculate.substring(0, dataToCalculate.length() - 1) + buttonText;
+            } else {
+                dataToCalculate += buttonText;
+            }
+
+            tvSolution.setText(dataToCalculate);
+            return;
+        }
 
         dataToCalculate = dataToCalculate + buttonText;
         tvSolution.setText(dataToCalculate);
     }
 
+    // Calculates the result of the expression
     private void calculateResult(String dataToCalculate) {
         try {
             Expression expression = new Expression(dataToCalculate);
