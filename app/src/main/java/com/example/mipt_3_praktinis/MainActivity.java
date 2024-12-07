@@ -5,22 +5,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tvSolution;
-    Button btnZero, btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine;
-    Button btnPlus, btnMinus, btnDivide, btnMultiply;
-    Button btnMC, btnMR, btnMS, btnMPlus, btnMMinus, btnBack, btnCE, btnC, btnPlusMinus, btnSquareRoot, btnPercentage, btnDivideOneByX, btnDot, btnEquals;
+    private Calculator calculator;
+    private TextView tvSolution;
+    private Button btnZero, btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine;
+    private Button btnPlus, btnMinus, btnDivide, btnMultiply;
+    private Button btnMC, btnMR, btnMS, btnMPlus, btnMMinus, btnBack, btnCE, btnC, btnPlusMinus, btnSquareRoot, btnPercentage, btnDivideOneByX, btnDot, btnEquals;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        calculator = new Calculator(); // Initialize the calculator
+
         tvSolution = findViewById(R.id.tvSolution);
 
+        // Initialize buttons
         assignId(btnZero, R.id.btnZero);
         assignId(btnOne, R.id.btnOne);
         assignId(btnTwo, R.id.btnTwo);
@@ -31,12 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         assignId(btnSeven, R.id.btnSeven);
         assignId(btnEight, R.id.btnEight);
         assignId(btnNine, R.id.btnNine);
-
         assignId(btnPlus, R.id.btnPlus);
         assignId(btnMinus, R.id.btnMinus);
         assignId(btnMultiply, R.id.btnMultiply);
         assignId(btnDivide, R.id.btnDivide);
-
         assignId(btnMC, R.id.btnMC);
         assignId(btnMR, R.id.btnMR);
         assignId(btnMS, R.id.btnMS);
@@ -66,7 +67,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Equals button logic (calculates result)
         if (button.getId() == R.id.btnEquals) {
-            calculateResult(dataToCalculate);
+            String result = calculator.calculateResult(dataToCalculate); // Call calculator logic
+            tvSolution.setText(result);
             return;
         }
 
@@ -76,13 +78,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        //Back button logic (deletes last character)
-        if (button.getId() == R.id.btnBack){
+        // Back button logic (deletes last character)
+        if (button.getId() == R.id.btnBack) {
             if (dataToCalculate.length() > 0) {
                 dataToCalculate = dataToCalculate.substring(0, dataToCalculate.length() - 1);
                 tvSolution.setText(dataToCalculate);
             }
-            if (dataToCalculate.length() == 0) {tvSolution.setText("0");}
+            if (dataToCalculate.length() == 0) {
+                tvSolution.setText("0");
+            }
             return;
         }
 
@@ -99,10 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 dataToCalculate.lastIndexOf('-'),
                                 Math.max(
                                         dataToCalculate.lastIndexOf('*'),
-                                        dataToCalculate.lastIndexOf('/')
-                                )
-                        )
-                );
+                                        dataToCalculate.lastIndexOf('/'))));
 
                 String lastNumber;
                 if (lastOperatorIndex == -1) {
@@ -128,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .replace("--", "+")
                         .replace("-+", "-");
 
-                if(dataToCalculate.startsWith("+")) {
+                if (dataToCalculate.startsWith("+")) {
                     dataToCalculate = dataToCalculate.substring(1);
                 }
 
@@ -145,10 +146,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             dataToCalculate.lastIndexOf('-'),
                             Math.max(
                                     dataToCalculate.lastIndexOf('*'),
-                                    dataToCalculate.lastIndexOf('/')
-                            )
-                    )
-            );
+                                    dataToCalculate.lastIndexOf('/'))));
 
             String lastNumber = lastOperatorIndex == -1 ? dataToCalculate : dataToCalculate.substring(lastOperatorIndex + 1);
 
@@ -163,6 +161,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
+        // Number buttons logic (appends the number to the calculation string)
         if (button.getId() == R.id.btnZero || button.getId() == R.id.btnOne || button.getId() == R.id.btnTwo ||
                 button.getId() == R.id.btnThree || button.getId() == R.id.btnFour || button.getId() == R.id.btnFive ||
                 button.getId() == R.id.btnSix || button.getId() == R.id.btnSeven || button.getId() == R.id.btnEight ||
@@ -177,7 +176,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        // Only one operator can be used in a row (division, multiplication, subtraction, addition)
+        // Operator button logic (appends the operator to the calculation string)
         if (button.getId() == R.id.btnPlus || button.getId() == R.id.btnMinus ||
                 button.getId() == R.id.btnMultiply || button.getId() == R.id.btnDivide) {
 
@@ -194,25 +193,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         dataToCalculate = dataToCalculate + buttonText;
         tvSolution.setText(dataToCalculate);
-    }
-
-    // Calculates the result of the expression
-    private void calculateResult(String dataToCalculate) {
-        try {
-            Expression expression = new Expression(dataToCalculate);
-            double result = expression.calculate();
-
-            if (Double.isNaN(result)) {
-                tvSolution.setText("Error");
-            } else {
-                if (result == (int) result) {
-                    tvSolution.setText(String.valueOf((int) result));
-                } else {
-                    tvSolution.setText(String.valueOf(result));
-                }
-            }
-        } catch (Exception e) {
-            tvSolution.setText("Error");
-        }
     }
 }

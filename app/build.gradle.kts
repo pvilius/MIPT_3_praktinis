@@ -47,6 +47,8 @@ dependencies {
     implementation(files("libs\\MathParser.org-mXparser.jar"))
     implementation(files("libs\\MathParser.org-mXparser.jar"))
     testImplementation(libs.junit)
+    testImplementation(libs.core)
+    testImplementation(libs.ext.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
